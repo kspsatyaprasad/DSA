@@ -14,7 +14,7 @@ public class Problem2 {
         // Calculating the average
         return (double) totalSum / totalElements;
     }
-
+// test comment
     // Main method to run the program
     public static void main(String[] args) {
 
