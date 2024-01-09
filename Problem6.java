@@ -1,5 +1,5 @@
 // Java program to calculate the number of vowels in a given string
-public class Problem6git {
+public class Problem6 {
 
     // Method to determine if a character is a vowel
     static boolean checkIfVowel(char character) {
