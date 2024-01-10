@@ -19,15 +19,15 @@ public class Problem8 {
             }
         }
 
-        // Return  },the found largest element
+        // Return the found largest element
         return largestElement;
     }
 
-        // Main method to execute the program
-        public static void main(String[] args) {
-            int[][] matrix = {
-                    { 1, 2, 3, 4 },
-                    { 25, 6, 7, 8
+    // Main method to execute the program
+    public static void main(String[] args) {
+        int[][] matrix = {
+                { 1, 2, 3, 4 },
+                { 25, 6, 7, 8 },
                 { 9, 10, 11, 12 },
                 { 13, 14, 15, 16 }
         };
