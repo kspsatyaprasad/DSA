@@ -36,7 +36,7 @@ public class Problem12 {
 
     // Main method for execution
     public static void main(String[] args) {
-        ArmstrongNumberChecker checker = new ArmstrongNumberChecker();
+        Problem12 checker = new Problem12();
         int num1 = 153;
         System.out.println("Is " + num1 + " an Armstrong number? " + checker.checkArmstrong(num1));
         int num2 = 1253;
