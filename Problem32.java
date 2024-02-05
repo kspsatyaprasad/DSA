@@ -1,46 +1,42 @@
 class Problem32 {
 
-    // Merge arr1 and arr2 into resultantArray
-    public static int[] mergeArrays(int[] arr1, int[] arr2) {
-        int s1 = arr1.length;
-        int s2 = arr2.length;
-        int[] resultantArray = new int[s1+s2];
+    // Function to merge two sorted arrays into a single sorted array
+    public static int[] mergeSortedArrays(int[] firstArray, int[] secondArray) {
+        int firstSize = firstArray.length;
+        int secondSize = secondArray.length;
+        int[] mergedArray = new int[firstSize + secondSize];
         int i = 0, j = 0, k = 0;
 
-        // Traverse both array
-        while (i < s1 && j < s2) {
-            // Check if current element of first
-            // array is smaller than current element
-            // of second array. If yes, store first
-            // array element and increment first array
-            // index. Otherwise do same with second array
-            if (arr1[i] < arr2[j])
-                resultantArray[k++] = arr1[i++];
+        // Iterating over both arrays and merging them in sorted order
+        while (i < firstSize && j < secondSize) {
+            if (firstArray[i] < secondArray[j])
+                mergedArray[k++] = firstArray[i++];
             else
-                resultantArray[k++] = arr2[j++];
+                mergedArray[k++] = secondArray[j++];
         }
 
-        // Store remaining elements of first array
-        while (i < s1)
-            resultantArray[k++] = arr1[i++];
+        // Appending remaining elements of the first array
+        while (i < firstSize)
+            mergedArray[k++] = firstArray[i++];
 
-        // Store remaining elements of second array
-        while (j < s2)
-            resultantArray[k++] = arr2[j++];
+        // Appending remaining elements of the second array
+        while (j < secondSize)
+            mergedArray[k++] = secondArray[j++];
 
-        return resultantArray;
+        return mergedArray;
     }
 
+    // Driver method to test the above function
     public static void main(String args[]) {
 
-        int[] arr1 = {1,12,14,17,23}; // creating a sorted array called arr1
-        int[] arr2 = {11,19,27};  // creating a sorted array called arr2
+        int[] firstArray = {1, 12, 14, 17, 23}; // a sorted array
+        int[] secondArray = {11, 19, 27};  // another sorted array
 
-        int[] resultantArray = mergeArrays(arr1, arr2); // calling mergeArrays
+        int[] mergedArray = mergeSortedArrays(firstArray, secondArray); // merging arrays
 
-        System.out.print("Arrays after merging: ");
-        for(int i = 0; i < arr1.length + arr2.length; i++) {
-            System.out.print(resultantArray[i] + " ");
+        System.out.print("Merged Sorted Array: ");
+        for(int i = 0; i < firstArray.length + secondArray.length; i++) {
+            System.out.print(mergedArray[i] + " ");
         }
     }
 }
